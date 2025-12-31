@@ -33,6 +33,7 @@ body {
 
   /*Agrupar todas as propriedades*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100%;
 }
 
 body * {
@@ -163,4 +164,16 @@ footer {
   padding: 12px 0px;
   text-align: center;
   font-size: 14px;
+}
+
+/*media queries*/
+/* de 700px para cima, ira add uma imagem de desktop*/
+/*apenas funciona com essa linha no html:    <meta name="viewport" content="width=device-width, initial-scale=1.0" />*/
+@media (min-width: 700px) {
+  :root {
+    ---bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    ---bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
